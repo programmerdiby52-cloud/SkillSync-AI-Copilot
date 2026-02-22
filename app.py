@@ -154,7 +154,8 @@ def load_css():
         }
         
         /* 5.5 Horizontal Radio Faux-Navbar */
-        div[role='radiogroup'] {
+        /* We isolate the CSS to ONLY target the Navbar radio group using aria-label matching */
+        div[role='radiogroup'][aria-label='Navigation'] {
             display: flex;
             flex-direction: row;
             gap: 4px;
@@ -162,7 +163,7 @@ def load_css():
             flex-wrap: wrap !important;
             justify-content: center;
         }
-        div[role='radiogroup'] > label {
+        div[role='radiogroup'][aria-label='Navigation'] > label {
             background-color: transparent !important;
             border: 1px solid transparent !important;
             padding: 6px 10px !important;
@@ -175,20 +176,21 @@ def load_css():
             margin: 0 !important;
             cursor: pointer;
         }
-        div[role='radiogroup'] > label:hover {
+        div[role='radiogroup'][aria-label='Navigation'] > label:hover {
             color: var(--text-primary) !important;
             background-color: var(--elevated-color) !important;
         }
         /* Active Radio State */
-        div[role='radiogroup'] > label[data-checked="true"] {
+        div[role='radiogroup'][aria-label='Navigation'] > label[data-checked="true"],
+        div[role='radiogroup'][aria-label='Navigation'] > label[aria-checked="true"] {
             background: var(--elevated-color) !important;
             border: 1px solid var(--border-color) !important;
             color: var(--text-primary) !important;
             font-weight: 600 !important;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05) !important;
         }
-        /* Hide default radio circles completely */
-        div[role='radiogroup'] > label > div:first-child {
+        /* Hide default radio circles completely for Navbar */
+        div[role='radiogroup'][aria-label='Navigation'] > label > div:first-child {
             display: none !important;
         }
         
