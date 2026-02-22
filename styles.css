@@ -1,0 +1,110 @@
+/* SkillSync Enterprise UI Aesthetics */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+html,
+body,
+[class*="css"] {
+    font-family: 'Inter', sans-serif;
+    color: #E2E8F0;
+}
+
+/* Background & Glassmorphism */
+.stApp {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.stSidebar {
+    background-color: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #F8FAFC !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.025em;
+}
+
+/* Premium Buttons */
+.stButton>button {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%) !important;
+}
+
+/* Input Fields */
+.stTextInput>div>div>input,
+.stSelectbox>div>div {
+    background-color: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #F8FAFC !important;
+    border-radius: 6px !important;
+}
+
+.stTextInput>div>div>input:focus,
+.stSelectbox>div>div:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Metric Cards */
+[data-testid="stMetricValue"] {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    background: -webkit-linear-gradient(135deg, #60A5FA, #3B82F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-testid="stMetricLabel"] {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: #94A3B8 !important;
+}
+
+/* Containers & Cards (Glass effect) */
+.st-emotion-cache-1y4p8pa,
+.st-emotion-cache-16idsys p {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.element-container {
+    animation: slideIn 0.4s ease-out forwards;
+}

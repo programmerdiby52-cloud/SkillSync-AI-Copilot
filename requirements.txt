@@ -1,0 +1,8 @@
+streamlit==1.42.1
+google-genai
+pydantic
+pandas
+plotly
+PyPDF2
+python-dotenv
+bcrypt

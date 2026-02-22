@@ -1,0 +1,69 @@
+/* SkillSync Light Mode Overrides */
+
+html,
+body,
+[class*="css"] {
+    color: #1E293B !important;
+}
+
+.stApp {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%) !important;
+}
+
+.stSidebar {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #0F172A !important;
+}
+
+.stTextInput>div>div>input,
+.stSelectbox>div>div {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    color: #0F172A !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+}
+
+[data-testid="stMetricValue"] {
+    background: -webkit-linear-gradient(135deg, #2563EB, #1D4ED8) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.st-emotion-cache-1y4p8pa,
+.st-emotion-cache-16idsys p {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Text visibility overrides */
+.stMarkdown p,
+.stMarkdown span,
+.stMarkdown li {
+    color: #1E293B !important;
+}
+
+.stSidebar p,
+.stSidebar span {
+    color: #1E293B !important;
+}
+
+.stTabs [data-baseweb="tab-list"] button {
+    color: #475569 !important;
+}
+
+.stTabs [data-baseweb="tab-highlight"] {
+    background-color: #2563EB !important;
+}
